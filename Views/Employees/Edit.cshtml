@@ -1,0 +1,117 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+@model Employee_Management.Models.Entity.Employee
+
+
+
+<div>
+    <h1> Edit Employee </h1>
+</div>
+
+<br />
+
+@if (Model is null)
+{
+    <p>No Employee was found with this id</p>
+}
+else
+{
+    <form method="post">
+
+        <div class="mt-3">
+            <label class="form-label"> FirstName </label>
+            <input type="text" class="form-control" asp-for="Id" readonly />
+        </div>
+
+        <div class="mt-3">
+            <label class="form-label"> FirstName </label>
+            <input type="text" class="form-control" asp-for="FirstName" />
+        </div>
+
+        <div class="mt-3">
+            <label class="form-label"> MiddleName </label>
+            <input type="text" class="form-control" asp-for="MiddleName" />
+        </div>
+
+        <div class="mt-3">
+            <label class="form-label"> LastName </label>
+            <input type="text" class="form-control" asp-for="LastName" />
+        </div>
+
+        <div class="mt-3">
+            <label class="form-label"> FullName </label>
+            <input type="text" class="form-control" asp-for="FullName" />
+        </div>
+
+        <div class="mt-3">
+            <label class="form-label"> Designation </label>
+            <input type="text" class="form-control" asp-for="Designation" />
+        </div>
+
+        <div class="mt-3">
+            <label class="form-label"> Joining_Date </label>
+            <input type="date" class="form-control" />
+        </div>
+
+        <div class="mt-3">
+            <label class="form-label">Phone</label>
+            <input type="number" class="form-control" asp-for="Phone" />
+        </div>
+
+        <div class="mt-3 d-flex justify-content-center align-items-center">
+
+            <button type="submit" class="btn btn-success me-3 mo">Save</button>
+
+            <button type="submit" class="btn btn-danger ms-3" asp-action="Delete" asp-controller="Employees"> <i class="fa-solid fa-trash"></i> Delete</button>
+
+        </div>
+
+    </form>
+}
+
+ @* @if ( Model is not null )
+ {
+     <div>
+
+         <table class="table table-borderless table-hover table-striped table-sm">
+             <thead class=" table table-secondary fw-bold ">
+                 <tr>
+                     <td>Emp_ID</td>
+                     <td>FirstName</td>
+                     <td>MiddleName</td>
+                     <td>LastName</td>
+                     <td>FullName</td>
+                     <td>Designation</td>
+                     <td>Joining_Data</td>
+                     <td>Phone</td>
+                 </tr>
+             </thead>
+             <tbody>
+                 @foreach (var employee in Model)
+                 {
+                     <tr>
+                         <td> @employee.Id  </td>
+                         <td> @employee.FirstName </td>
+                         <td> @employee.MiddleName </td>
+                         <td> @employee.LastName</td>
+                         <td> @employee.FullName </td>
+                         <td> @employee.Designation </td>
+                         <td> @employee.Joining_Date </td>
+                         <td> @employee.Phone </td>
+                         <td>
+                             <a> Edit </a>
+                         </td>
+                     </tr>
+                 }
+             </tbody>
+         </table>
+
+     </div>
+ } *@
