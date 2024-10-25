@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "HTaT0HyLIvQj/exsVq9zBWGqJfMpHGZ8dWmzUw7wXWs=",
+  "Hash": "ibuPtrDlBuUP6QhV4AQorZG3FlgVrKa/jEIX23qGrFw=",
   "Source": "Employee_Management",
   "BasePath": "_content/Employee_Management",
   "Mode": "Default",
@@ -110,6 +110,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Admin\\Desktop\\Employee Management\\Employee_Management\\wwwroot\\Images\\christina-wocintechchat-com-Q80LYxv_Tbs-unsplash.jpg",
+      "SourceId": "Employee_Management",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admin\\Desktop\\Employee Management\\Employee_Management\\wwwroot\\",
+      "BasePath": "_content/Employee_Management",
+      "RelativePath": "Images/christina-wocintechchat-com-Q80LYxv_Tbs-unsplash.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\christina-wocintechchat-com-Q80LYxv_Tbs-unsplash.jpg"
     },
     {
       "Identity": "C:\\Users\\Admin\\Desktop\\Employee Management\\Employee_Management\\wwwroot\\js\\site.js",

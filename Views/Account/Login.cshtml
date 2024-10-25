@@ -9,10 +9,44 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-<div class="account-container">
-    <h3 class="text-center mt-2  bg-alert-light "> <i class="fa-sharp-duotone fa-solid fa-users "></i> Employee Management Syatem</h3>
+<style>
+    body {
+        background-color: #f8f9fa;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url('~/wwwroot/Images/christina-wocintechchat-com-Q80LYxv_Tbs-unsplash.jpg');
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .account-container {
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 400px;
+    }
+    .account-box h2 {
+        margin-bottom: 20px;
+    }
+    .text-center.mt-2.bg-alert-light {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        padding: 10px;
+        background-color: #e9ecef;
+        border-radius: 4px;
+    }
+</style>
+
+
+@* <div class="account-container">
+    <h6 class="text-center mt-2  bg-alert-light "> <i class="fa-sharp-duotone fa-solid fa-users "></i> Employee Management System</h6>
     <div class="account-box">
-        <h2 class="text-center mb-4" >Login Page</h2>
+        <h2 class="text-center mb-4" >Login</h2>
         <form asp-action="Login" method="post" >
             <div  class="text-danger">
                 <div class="mb-3">
@@ -38,6 +72,7 @@
                      </label>
                  </div>
 
+                
                 <input type="submit" value="Login" class="btn btn-success w-100 p-2" />
 
                 <p class="text-center mt-2">
@@ -45,10 +80,67 @@
                 </p>
 
                 <div class="text-center">
-                    <a asp-controller="Home" asp-action="Index" class="text-decoration-none mt-3 fw-bolder text-success">Back</a>
+                    <a asp-controller="Home" asp-action="Index" class="text-decoration-none mt-3 fw-bolder text-success"> <i class="fa-sharp fa-solid fa-arrow-left"></i> Back</a>
                 </div>
             </div>
         </form>
+        
+    </div>
+</div> *@
+<h6 class="text-center mt-2 bg-alert-light">
+    <i class="fa-sharp-duotone fa-solid fa-users"></i> Employee Management System
+</h6>
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-8">
+            <img src="https://images.pexels.com/photos/7988655/pexels-photo-7988655.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image" class="img-fluid">
+        </div>
+
+        <div class="col-md-4">
+            
+            <div class="account-box">
+                <h2 class="text-center mb-4">Login</h2>
+                <form asp-action="Login" method="post">
+                    <div class="text-danger">
+                        <div class="mb-3">
+                            <label asp-for="Email" class="form-label"></label>
+                            <input asp-for="Email" class="form-control" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Password" class="form-label"></label>
+                            <input asp-for="Password" class="form-control" />
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+
+                        <div class="float-end">
+                            <a asp-controller="Account" asp-action="VerifyEmail" class="text-decoration-none">Forgot Password?</a>
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <label class="form-check-label">
+                                <input asp-for="RememberMe" class="form-check-input" />
+                                @Html.DisplayNameFor(a => a.RememberMe)
+                            </label>
+                        </div>
+
+                        <input type="submit" value="Login" class="btn btn-success w-100 p-2" />
+
+                        <p class="text-center mt-2">
+                            Don't have an account? <a asp-controller="Account" asp-action="Register" class="text-decoration-none fw-bold text-primary">Register</a>
+                        </p>
+
+                        <div class="text-center">
+                            <a asp-controller="Home" asp-action="Index" class="text-decoration-none mt-3 fw-bolder text-success">
+                                <i class="fa-sharp fa-solid fa-arrow-left"></i> Back
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
         
     </div>
 </div>

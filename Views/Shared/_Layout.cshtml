@@ -11,7 +11,7 @@
 
 </head>
 <body class=" ">
-    <header>
+    @* <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3 bg-opacity-10 navbar-light bg-light ">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"> <i class="fa-duotone fa-solid fa-users"></i> Employees Management System</a>
@@ -24,20 +24,66 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
+                       
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Employees" asp-action="List"> <i class="fa-solid fa-users"></i> List All Employees</a>
                         </li>
                         
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Employees" asp-action="List"> <i class="fa-solid fa-users"></i>  All Employees</a>
+                        <li class="nav-item ">  
+                            <a class="nav-link text-success " asp-area="" asp-controller="Employees" asp-action="Add"> <i class="fa-sharp fa-solid fa-plus"></i> Create New Employee </a> 
                         </li>
+                     
+                        
                         <Partial name="_Loginpartial" />
                         
                        
                     </ul>
                 </div>
             </div>
-        </nav>
+        </nav> *@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm p-3 mb-4 bg-secondary ">
+    <div class="container-fluid">
+        <!-- Brand/Logo -->
+        <a class="navbar-brand d-flex align-items-center " asp-area="" asp-controller="Home" asp-action="Index">
+            <i class="fa-solid fa-users fa-2x me-2 text-primary"></i> 
+            <span class="fs-4 fw-bolder">Employees Management System</span>
+        </a>
+
+        <!-- Toggle Button for Mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item fw-bolder fs-5">
+                    <a class="nav-link active" asp-area="" asp-controller="Home" asp-action="Index"> <i class="fa-solid fa-house"></i> Home</a>
+                </li>
+
+                <li class="nav-item fw-bolder fs-5 ">
+                    <a class="nav-link" asp-area="" asp-controller="Employees" asp-action="List">
+                        <i class="fa-solid fa-users me-1"></i> List All Employees
+                    </a>
+                </li>
+
+                <li class="nav-item fw-bolder fs-5">
+                    <a class="nav-link text-success" asp-area="" asp-controller="Employees" asp-action="Add">
+                        <i class="fa-solid fa-plus me-1"></i> Create New Employee
+                    </a>
+                </li>
+
+                <!-- Optional: Login/Logout Section -->
+                <li class="nav-item">
+                    <Partial name="_Loginpartial" />
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
     </header>
     <div class="container">
         <main role="main" class="pb-3">
